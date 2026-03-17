@@ -7,9 +7,9 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-dark-900 text-white">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <img 
-          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80" 
-          alt="Tech Workspace" 
+        <img
+          src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80"
+          alt="Tech Workspace"
           className="w-full h-full object-cover opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-dark-900/50 via-dark-900/80 to-dark-900" />
@@ -27,24 +27,33 @@ export function Hero() {
               <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
               Available for new opportunities
             </div>
-            
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-white drop-shadow-lg">
-              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-white to-teal-300 drop-shadow-[0_0_15px_rgba(20,184,166,0.5)]">Valeria Spektor</span>
+              Hi, I'm{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-white to-teal-300 drop-shadow-[0_0_15px_rgba(20,184,166,0.5)]">
+                Valeria Spektor
+              </span>
             </h1>
-            
+
             <h2 className="text-2xl md:text-3xl font-medium text-slate-300 mb-6">
               QA Engineer | Manual QA | Web & API Testing
             </h2>
-            
+
             <p className="text-lg text-slate-400 mb-10 max-w-xl leading-relaxed">
               Ensuring product excellence through structured manual testing, comprehensive API validation, and meticulous attention to detail. I bridge the gap between development and user expectations.
             </p>
-            
+
             <div className="flex flex-wrap gap-4 mb-12">
               <Button size="lg" href="#experience" className="gap-2">
                 View Experience <ArrowRight size={18} />
               </Button>
-              <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-white/5 hover:text-white gap-2">
+
+              <Button
+                size="lg"
+                variant="outline"
+                href="/CV.pdf"
+                className="border-slate-600 text-white hover:bg-white/5 hover:text-white gap-2"
+              >
                 <Download size={18} /> Download CV
               </Button>
             </div>
@@ -81,6 +90,7 @@ export function Hero() {
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
                   <div className="ml-4 text-xs font-mono text-slate-500">qa_test_suite.ts</div>
                 </div>
+
                 <div className="p-6 flex-1 flex flex-col justify-center gap-4">
                   <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/5 transform transition-transform hover:scale-[1.02]">
                     <div className="p-3 rounded-lg bg-teal-500/20 text-teal-400">
@@ -92,7 +102,7 @@ export function Hero() {
                     </div>
                     <CheckCircle2 className="ml-auto text-teal-500" size={20} />
                   </div>
-                  
+
                   <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/5 transform transition-transform hover:scale-[1.02]">
                     <div className="p-3 rounded-lg bg-blue-500/20 text-blue-400">
                       <Database size={24} />
@@ -116,13 +126,20 @@ export function Hero() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Floating badges */}
-              <div className="absolute -right-6 top-1/4 bg-dark-800 border border-white/10 p-3 rounded-xl shadow-xl flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
+              <div
+                className="absolute -right-6 top-1/4 bg-dark-800 border border-white/10 p-3 rounded-xl shadow-xl flex items-center gap-3 animate-bounce"
+                style={{ animationDuration: '3s' }}
+              >
                 <div className="w-2 h-2 rounded-full bg-green-500" />
                 <span className="text-sm font-medium">0 Bugs in Prod</span>
               </div>
-              <div className="absolute -left-8 bottom-1/3 bg-dark-800 border border-white/10 p-3 rounded-xl shadow-xl flex items-center gap-3 animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>
+
+              <div
+                className="absolute -left-8 bottom-1/3 bg-dark-800 border border-white/10 p-3 rounded-xl shadow-xl flex items-center gap-3 animate-bounce"
+                style={{ animationDuration: '4s', animationDelay: '1s' }}
+              >
                 <span className="text-sm font-medium text-primary-400">100%</span>
                 <span className="text-sm font-medium">Regression Coverage</span>
               </div>
