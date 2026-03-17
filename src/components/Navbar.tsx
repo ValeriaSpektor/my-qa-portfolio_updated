@@ -20,6 +20,7 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -36,7 +37,6 @@ export function Navbar() {
             Valeria<span className="text-primary-600">.</span>
           </a>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8">
             <ul className="flex space-x-6">
               {navItems.map((item) => (
@@ -50,18 +50,24 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
+
             <div className="flex items-center space-x-4">
               <Button variant="outline" size="sm" href="#contact">
                 Contact Me
               </Button>
-              <Button size="sm" className="gap-2">
+
+              <Button
+                size="sm"
+                href="/CV.pdf"
+                download
+                className="gap-2"
+              >
                 <Download size={16} />
                 CV
               </Button>
             </div>
           </nav>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-slate-600"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -71,7 +77,6 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-100 shadow-lg py-4 px-4 flex flex-col space-y-4">
           {navItems.map((item) => (
@@ -84,11 +89,22 @@ export function Navbar() {
               {item.name}
             </a>
           ))}
+
           <div className="flex flex-col space-y-3 pt-4 border-t border-slate-100">
-            <Button variant="outline" className="w-full justify-center" href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+            <Button
+              variant="outline"
+              className="w-full justify-center"
+              href="#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               Contact Me
             </Button>
-            <Button className="w-full justify-center gap-2">
+
+            <Button
+              className="w-full justify-center gap-2"
+              href="/CV.pdf"
+              download
+            >
               <Download size={18} />
               Download CV
             </Button>
