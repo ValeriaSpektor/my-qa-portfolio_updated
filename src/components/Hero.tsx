@@ -29,7 +29,7 @@ export function Hero() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-white drop-shadow-lg">
-              Hi, I'm{' '}
+              Hi, I&apos;m{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-white to-teal-300 drop-shadow-[0_0_15px_rgba(20,184,166,0.5)]">
                 Valeria Spektor
               </span>
@@ -52,6 +52,7 @@ export function Hero() {
                 size="lg"
                 variant="outline"
                 href="/CV.pdf"
+                download
                 className="border-slate-600 text-white hover:bg-white/5 hover:text-white gap-2"
               >
                 <Download size={18} /> Download CV
@@ -81,7 +82,6 @@ export function Hero() {
             className="hidden lg:block relative"
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
-              {/* Decorative abstract tech representation */}
               <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/30 to-blue-500/30 rounded-2xl blur-2xl animate-pulse" />
               <div className="relative w-full aspect-square rounded-2xl border border-white/10 shadow-2xl bg-dark-800 overflow-hidden flex flex-col">
                 <div className="h-10 bg-dark-900/80 border-b border-white/5 flex items-center px-4 gap-2">
@@ -127,7 +127,6 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Floating badges */}
               <div
                 className="absolute -right-6 top-1/4 bg-dark-800 border border-white/10 p-3 rounded-xl shadow-xl flex items-center gap-3 animate-bounce"
                 style={{ animationDuration: '3s' }}
